@@ -74,17 +74,74 @@ body {
   margin-top: 1em;
 }
 
+#game-start-message {
+  /*text-transform: uppercase;*/
+  font-family: courier, "Courier New", monospace;
+  background: #000;
+  color: #FFF;
+  width: 800px;
+  font-size: 4em;
+  padding: 1.4em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
 #game-over-message p {
   padding-top: 2em;
   font-size: 0.4em;
 }
 
+#game-start-message {
+  text-transform: uppercase;
+  font-family: courier, "Courier New", monospace;
+  background: #000;
+  color: #FFF;
+  width: 800px;
+  font-size: 4em;
+  padding: 1.4em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+#game-start-message p {
+  padding-top: 1em;
+  font-size: 0.5em;
+}
+
+#game-start-message ul {
+  padding-top: 1em;
+  font-size: 0.5em;
+}
+
+#game-start-message li {
+  padding-bottom: 0.5em;
+}
+
+#level-easy {
+  color:green;
+}
+
+#level-medium {
+  color:orange;
+}
+
+#level-hard {
+  color:red;
+}
+
 #game-score {
-  position: absolute;
-  font-size: 26px;
-  margin-top: 685px;
-  margin-left: 1100px;
+  font-family: courier, "Courier New", monospace;
+  float:right;
+  /*position: absolute;*/
+  font-size: 2.5em;
+  margin-top: 680px;
+  /*margin-left: 1220px;*/
   color: white;
   font-weight: bold;
+  margin-right:125px;
 }
 

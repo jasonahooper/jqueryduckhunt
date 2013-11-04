@@ -16,7 +16,15 @@ $(document).ready(function() {
   });
   // Kick-off a New Game
   // TODO: Pass in a string to represent the difficulty level
-  new Game();
+  console.log("Start");
+  $("#game-over-message").toggle();
+  $("#game-over").toggle();
+  $('.game-start').click(function(e) {
+    $("#game-over").toggle();
+    $("#game-over-message").toggle();
+    new Game(this.id.substr(6));
+  });
+  // new Game();
 
   // new Duck();
 });

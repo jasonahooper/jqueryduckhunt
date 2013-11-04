@@ -68,7 +68,7 @@ Duck.prototype.die = function() {
   var _this = this;
   $(this.el).animate({
     top: $('#game').height() + 100}, 1000, "linear", function() {
-      _this.complete().remove();
+      _this.remove();
     });
 }
 
