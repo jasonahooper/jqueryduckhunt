@@ -79,3 +79,12 @@ body {
   font-size: 0.4em;
 }
 
+#game-score {
+  position: absolute;
+  font-size: 26px;
+  margin-top: 685px;
+  margin-left: 1100px;
+  color: white;
+  font-weight: bold;
+}
+
