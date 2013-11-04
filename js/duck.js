@@ -36,25 +36,40 @@ Duck.prototype.flap = function() {
 // TODO: Display the Duck on the screen.
 Duck.prototype.draw = function() {
   // Make the duck appear somewhere random along the page and just off the screen
-
+  $(this.el).css({
+    top: randomHeight(),
+    left: "-200px"
+  });
   // Append the element to the DOM, use the #game element
-
+  $('#game').append(this.el);
   // Start Flapping...
-
+  this.flap();
   // ... and Fly!
+  var _this = this;
+  $(this.el).animate({
+    left: "+=1600px",
+    top: randomHeight()
+  }, 10000, "linear", function() {
+    _this.complete().remove();
+  });
 }
 
 // TODO: I've been shot!
 Duck.prototype.die = function() {
   // Add a .dead CSS class
-
+  $(this.el).addClass("dead");
   // Stop flapping - clear the flapTimer
-
+  clearTimeout(this.flapTimer);
   // Stop flying animations
-
+  this.el.stop();
   // Notify the Game object and add 100 to the score
-
+  this.game.addScore(100);
   // Fall to the bottom of the screen
+  var _this = this;
+  $(this.el).animate({
+    top: $('#game').height() + 100}, 1000, "linear", function() {
+      _this.complete().remove();
+    });
 }
 
 // I made it to the other side!
