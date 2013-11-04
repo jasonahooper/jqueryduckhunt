@@ -136,12 +136,9 @@ body {
 #game-score {
   font-family: courier, "Courier New", monospace;
   float:right;
-  /*position: absolute;*/
   font-size: 2.5em;
   margin-top: 680px;
-  /*margin-left: 1220px;*/
   color: white;
-  font-weight: bold;
   margin-right:125px;
 }
 
