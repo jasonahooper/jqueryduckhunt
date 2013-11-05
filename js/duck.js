@@ -17,9 +17,9 @@ function Duck(game) {
 
   // Add a callback for when the Duck is missed!
   // $('#game').on("click", function(e) {
-  //   _this.game.shots--;
-  //   $('#round-shots').html(_this.game.shots);
-  //   if (e.target.className === "sprite duck right") {
+  //   if (e.toElement == _this.el) {
+  //     _this.game.shots--;
+  //     $('#round-shot' + _this.game.shots).removeClass("shot sprite")
   //     _this.die();
   //   }
   // });
@@ -62,7 +62,7 @@ Duck.prototype.draw = function() {
   $(this.el).animate({
     left: "+=1600px",
     top: randomHeight()
-  }, 10000, "linear", function() {
+  }, _this.game.speed, "linear", function() {
     _this.complete().remove();
   });
 }
