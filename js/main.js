@@ -1,10 +1,11 @@
 $(document).ready(function() {
+  var difficulty
   console.log("Welcome to Duck Hunt!");
 
   // Behaviour for the play again link
   $('#play-again').click(function(e) {
     $("#game-over").toggle();
-    new Game();
+    new Game(difficulty);
   });
 
   // Moves the crosshair with the mousepointer
@@ -20,7 +21,8 @@ $(document).ready(function() {
   $("#game-start").toggle();
   $('.game-start').click(function(e) {
     $("#game-start").toggle();
-    new Game(this.id.substr(6));
+    difficulty = this.id.substr(6);
+    new Game(difficulty);
   });
 
 });
