@@ -3,6 +3,7 @@
 function Game(difficulty) {
   this.lives = 10;
   this.score = 0;
+  this.shots = 3;
 
   // Set the difficulty- easy by default
   if(typeof(difficulty) === "undefined") {
@@ -11,8 +12,9 @@ function Game(difficulty) {
   else {
     this.speed = this.difficulty[difficulty];
   }
-
+  // set initial score
   this.addScore(0);
+
   // Kick-off the first wave of Ducks
   this.nextRound();
 }
@@ -30,6 +32,9 @@ Game.prototype.nextRound = function() {
   var duck = new Duck(this);
   var duck = new Duck(this);
   var _this = this;
+
+  this.shots = 3;
+    $('.round-shot').addClass("shot sprite");
 
   // Do this again in a little while...
   var roundTimer = setTimeout(function() {

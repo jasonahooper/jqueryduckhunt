@@ -8,8 +8,21 @@ function Duck(game) {
   // Add a callback for when the Duck is clicked (shot!)
   var _this = this;
   $(this.el).click(function() {
-    _this.die();
+    _this.game.shots--;
+    if (_this.game.shots >= 0) {
+      _this.die();
+      $('#round-shot' + _this.game.shots).removeClass("shot sprite")
+    }
   });
+
+  // Add a callback for when the Duck is missed!
+  // $('#game').on("click", function(e) {
+  //   _this.game.shots--;
+  //   $('#round-shots').html(_this.game.shots);
+  //   if (e.target.className === "sprite duck right") {
+  //     _this.die();
+  //   }
+  // });
 
   // Display the Duck in the #game
   this.draw();

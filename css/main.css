@@ -133,6 +133,15 @@ body {
   color:red;
 }
 
+.round-shot {
+  float: left;
+  margin-top: 688px;
+}
+
+#round-shot1 {
+  margin-left: 109px;
+}
+
 #game-score {
   font-family: courier, "Courier New", monospace;
   float:right;
@@ -142,3 +151,8 @@ body {
   margin-right:125px;
 }
 
+.shot {
+  background-position: -735px -773px;
+  width: 20px;
+  height: 30px;
+}
