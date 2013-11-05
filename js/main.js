@@ -17,11 +17,9 @@ $(document).ready(function() {
 
   // Kick-off a New Game
   // TODO: Pass in a string to represent the difficulty level
-  $("#game-over-message").toggle();
-  $("#game-over").toggle();
+  $("#game-start").toggle();
   $('.game-start').click(function(e) {
-    $("#game-over").toggle();
-    $("#game-over-message").toggle();
+    $("#game-start").toggle();
     new Game(this.id.substr(6));
   });
 
