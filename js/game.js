@@ -5,6 +5,15 @@ function Game(difficulty) {
   this.score = 0;
   this.shots = 3;
 
+  // Add a callback for when the Duck is missed!
+  var _this = this;
+  $('#game').click(function() {
+    _this.shots--;
+    if (_this.shots >= 0) {
+      $('#round-shot' + _this.shots).removeClass("shot sprite")
+    }
+  });
+
   // Set the difficulty- easy by default
   if(typeof(difficulty) === "undefined") {
     this.speed = this.difficulty.easy;
